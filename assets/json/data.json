@@ -1,65 +1,46 @@
 [
   {
-    "daily": {
-      "currentDailyWork": 5,
-      "previousDailyWork": 7,
-  
-      "currentDailyPlay": 1,
-      "previousDailyPlay": 2,
-  
-      "currentDailyStudy": 0,
-      "previousDailyStudy": 1,
-  
-      "currentDailyExercise": 1,
-      "previousDailyExercise": 1,
-  
-      "currentDailySocial": 1,
-      "previousDailySocial": 3,
-  
-      "currentDailySelfCare": 0,
-      "previousDailySelfCare": 1
-    }
+    "currentDailyWork": 5,
+    "previousDailyWork": 7,
+    "currentDailyPlay": 1,
+    "previousDailyPlay": 2,
+    "currentDailyStudy": 0,
+    "previousDailyStudy": 1,
+    "currentDailyExercise": 1,
+    "previousDailyExercise": 1,
+    "currentDailySocial": 1,
+    "previousDailySocial": 3,
+    "currentDailySelfCare": 0,
+    "previousDailySelfCare": 1
   },
+
   {
-    "weekly": {
-      "currentWeeklyWork": 32,
-      "previousWeeklyWork": 36,
-  
-      "currentWeeklyPlay": 10,
-      "previousWeeklyPlay": 8,
-  
-      "currentWeeklyStudy": 4,
-      "previousWeeklyStudy": 7,
-  
-      "currentWeeklyExcercise": 4,
-      "previousWeeklyExcercise": 5,
-  
-      "currentWeeklySocial": 5,
-      "previousWeeklySocial": 10,
-  
-      "currentWeeklySelfCare": 2,
-      "previousWeeklySelfCare": 2
-    }
+    "currentWeeklyWork": 32,
+    "previousWeeklyWork": 36,
+    "currentWeeklyPlay": 10,
+    "previousWeeklyPlay": 8,
+    "currentWeeklyStudy": 4,
+    "previousWeeklyStudy": 7,
+    "currentWeeklyExcercise": 4,
+    "previousWeeklyExcercise": 5,
+    "currentWeeklySocial": 5,
+    "previousWeeklySocial": 10,
+    "currentWeeklySelfCare": 2,
+    "previousWeeklySelfCare": 2
   },
+  
   {
-    "monthly": {
     "currentMonthlyWork": 103,
     "previousMonthlyWork": 128,
-
     "currentMonthlyPlay": 23,
     "previousMonthlyPlay": 29,
-
     "currentMonthlyStudy": 13,
     "previousMonthlyStudy": 19,
-
     "currentMonthlyExcercise": 11,
     "previousMonthlyExcercise": 18,
-
     "currentMonthlySocial": 21,
     "previousMonthlySocial": 23,
-
     "currentMonthlySelfCare": 7,
     "previousMonthlySelfCare": 11
-    }
   }
 ]
