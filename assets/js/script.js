@@ -2,7 +2,7 @@ const dataJson = "https://raw.githubusercontent.com/JoshMooner/TimeTrackingDashb
 
 function getDaily() {
     fetch(dataJson)
-        .then( res => res.json)
+        .then( res => res.json())
         .then( data => {
             //console.log(data)
             tabla(data)
@@ -11,4 +11,7 @@ function getDaily() {
 
 function tabla(data) {
     console.log(data)
+    for(let valor of data){
+        console.log(valor.daily)
+    }
 }

@@ -1,23 +1,26 @@
 [
   {
-    "currentDailyWork": 5,
-    "previousDailyWork": 7,
+    "daily": {
+      "currentDailyWork": 5,
+      "previousDailyWork": 7,
+  
+      "currentDailyPlay": 1,
+      "previousDailyPlay": 2,
+  
+      "currentDailyStudy": 0,
+      "previousDailyStudy": 1,
+  
+      "currentDailyExcercise": 1,
+      "previousDailyExcercise": 1,
+  
+      "currentDailySocial": 1,
+      "previousDailySocial": 3,
+  
+      "currentDailySelfCare": 0,
+      "previousDailySelfCare": 1
+    }
+  }
 
-    "currentDailyPlay": 1,
-    "previousDailyPlay": 2,
-
-    "currentDailyStudy": 0,
-    "previousDailyStudy": 1,
-
-    "currentDailyExcercise": 1,
-    "previousDailyExcercise": 1,
-
-    "currentDailySocial": 1,
-    "previousDailySocial": 3,
-
-    "currentDailySelfCare": 0,
-    "previousDailySelfCare": 1
-  },
 
   {
     "currentWeeklyWork": 32,
