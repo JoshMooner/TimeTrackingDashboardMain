@@ -18,23 +18,73 @@ const previousSocial = document.querySelector('#previousSocial')
 const currentSelfCare = document.querySelector('#currentSelfCare')
 const previousSelfCare = document.querySelector('#previousSelfCare')
 
-// const daily = document.getElementById("daily")
-// daily.addEventListener("click", getDaily)
+const daily = document.getElementById("daily")
+daily.addEventListener("click", getDaily)
 
-// const weekly = document.getElementById("weekly")
-// weekly.addEventListener("click", getWeekly)
+const weekly = document.getElementById("weekly")
+weekly.addEventListener("click", getWeekly)
 
 // const monthly = document.getElementById("monthly")
 // monthly.addEventListener("click", getMonthly)
 
+function getDaily() {
+    fetch(dataJson)
+        .then(response => response.json())
+        .then(data => showData(data))
+        .catch(error => console.log(error))
 
-fetch(dataJson)
-    .then(response => response.json())
-    .then(data => showData(data))
-    .catch(error => console.log(error))
+    const showData = (data) => {
+        console.log(data)
+        console.log(data[0].currentDailyWork)
 
-const showData = (data) => {
-    console.log(data)
+        currentWork.innerHTML = `${data[0].currentDailyWork} hrs`
+        previousWork.innerHTML = `Last Day - ${data[0].previousDailyWork} hrs`
+
+        currentPlay.innerHTML = `${data[0].currentDailyPlay} hrs`
+        previousPlay.innerHTML = `Last Day - ${data[0].previousDailyPlay} hrs`
+
+        currentStudy.innerHTML = `${data[0].currentDailyStudy} hrs`
+        previousStudy.innerHTML = `Last Day - ${data[0].previousDailyStudy} hrs`
+
+        currentExercise.innerHTML = `${data[0].currentDailyExercise} hrs`
+        previousExercise.innerHTML = `Last Day - ${data[0].previousDailyExercise} 1hrs`
+
+        currentSocial.innerHTML = `${data[0].currentDailySocial} hrs`
+        previousSocial.innerHTML = `Last Day - ${data[0].previousDailySocial} hrs`
+
+        currentSelfCare.innerHTML = `${data[0].currentDailySelfCare} hrs`
+        previousSelfCare.innerHTML = `Last Day - ${data[0].previousDailySelfCare} hrs`
+    }
+}
+
+function getWeekly() {
+    fetch(dataJson)
+        .then(response => response.json())
+        .then(data => showData(data))
+        .catch(error => console.log(error))
+
+    const showData = (data) => {
+        console.log(data)
+        console.log(data[1].currentWeeklyWork)
+
+        currentWork.innerHTML = `${data[1].currentWeeklyWork} hrs`
+        previousWork.innerHTML = `Last Week - ${data[1].previousWeeklyWork} hrs`
+
+        currentPlay.innerHTML = `${data[1].currentWeeklyPlay} hrs`
+        previousPlay.innerHTML = `Last Week - ${data[1].previousWeeklyPlay} hrs`
+
+        currentStudy.innerHTML = `${data[1].currentWeeklyStudy} hrs`
+        previousStudy.innerHTML = `Last Week - ${data[1].previousWeeklyStudy} hrs`
+
+        currentExercise.innerHTML = `${data[1].currentWeeklyExercise} hrs`
+        previousExercise.innerHTML = `Last Week - ${data[1].previousWeeklyExercise} 1hrs`
+
+        currentSocial.innerHTML = `${data[1].currentWeeklySocial} hrs`
+        previousSocial.innerHTML = `Last Week - ${data[1].previousWeeklySocial} hrs`
+
+        currentSelfCare.innerHTML = `${data[1].currentWeeklySelfCare} hrs`
+        previousSelfCare.innerHTML = `Last Week - ${data[1].previousWeeklySelfCare} hrs`
+    }
 }
 // function getDaily() {
 //     fetch(dataJson)
@@ -46,28 +96,28 @@ const showData = (data) => {
 //     function dailyTable(data) {
 //         for (let value of data) {
 
-//             currentWork.innerHTML = `${value.daily.currentDailyWork} hrs`
-//             previousWork.innerHTML = `Last Day - ${value.daily.previousDailyWork} hrs`
+//             currentWork.innerHTML = `${data[0].currentDailyWork} hrs`
+//             previousWork.innerHTML = `Last Day - ${data[0].previousDailyWork} hrs`
 
-//             currentPlay.innerHTML = `${value.daily.currentDailyPlay} hrs`
-//             previousPlay.innerHTML = `Last Day - ${value.daily.previousDailyPlay} hrs`
+//             currentPlay.innerHTML = `${data[0].currentDailyPlay} hrs`
+//             previousPlay.innerHTML = `Last Day - ${data[0].previousDailyPlay} hrs`
 
-//             currentStudy.innerHTML = `${value.daily.currentDailyStudy} hrs`
-//             previousStudy.innerHTML = `Last Day - ${value.daily.previousDailyStudy} hrs`
+//             currentStudy.innerHTML = `${data[0].currentDailyStudy} hrs`
+//             previousStudy.innerHTML = `Last Day - ${data[0].previousDailyStudy} hrs`
 
-//             currentExercise.innerHTML = `${value.daily.currentDailyExercise} hrs`
-//             previousExercise.innerHTML = `Last Day - ${value.daily.previousDailyExercise} 1hrs`
+//             currentExercise.innerHTML = `${data[0].currentDailyExercise} hrs`
+//             previousExercise.innerHTML = `Last Day - ${data[0].previousDailyExercise} 1hrs`
 
-//             currentSocial.innerHTML = `${value.daily.currentDailySocial} hrs`
-//             previousSocial.innerHTML = `Last Day - ${value.daily.previousDailySocial} hrs`
+//             currentSocial.innerHTML = `${data[0].currentDailySocial} hrs`
+//             previousSocial.innerHTML = `Last Day - ${data[0].previousDailySocial} hrs`
 
-//             currentSelfCare.innerHTML = `${value.daily.currentDailySelfCare} hrs`
-//             previousSelfCare.innerHTML = `Last Day - ${value.daily.previousDailySelfCare} hrs`
+//             currentSelfCare.innerHTML = `${data[0].currentDailySelfCare} hrs`
+//             previousSelfCare.innerHTML = `Last Day - ${data[0].previousDailySelfCare} hrs`
 
 
 //             //console.log(value)
 //             // console.log(value.daily)
-//             //console.log(value.daily.currentDailyWork)
+//             //console.log(data[0].currentDailyWork)
 //         }
 //     }
 // }
@@ -85,28 +135,28 @@ const showData = (data) => {
 //         //currentWork.innerHTML = ''
 //         for (let value of data) {
 
-//             currentWork.innerHTML = `${value.weekly.currentWeeklyWork} hrs`
-//             previousWork.innerHTML = `Last Week - ${value.weekly.previousWeeklyWork} hrs`
+//             currentWork.innerHTML = `${data[1].currentWeeklyWork} hrs`
+//             previousWork.innerHTML = `Last Week - ${data[1].previousWeeklyWork} hrs`
 
-//             currentPlay.innerHTML = `${value.weekly.currentWeeklyPlay} hrs`
-//             previousPlay.innerHTML = `Last Week - ${value.weekly.previousWeeklyPlay} hrs`
+//             currentPlay.innerHTML = `${data[1].currentWeeklyPlay} hrs`
+//             previousPlay.innerHTML = `Last Week - ${data[1].previousWeeklyPlay} hrs`
 
-//             currentStudy.innerHTML = `${value.weekly.currentWeeklyStudy} hrs`
-//             previousStudy.innerHTML = `Last Week - ${value.weekly.previousWeeklyStudy} hrs`
+//             currentStudy.innerHTML = `${data[1].currentWeeklyStudy} hrs`
+//             previousStudy.innerHTML = `Last Week - ${data[1].previousWeeklyStudy} hrs`
 
-//             currentExercise.innerHTML = `${value.weekly.currentWeeklyExercise} hrs`
-//             previousExercise.innerHTML = `Last Week - ${value.weekly.previousWeeklyExercise} 1hrs`
+//             currentExercise.innerHTML = `${data[1].currentWeeklyExercise} hrs`
+//             previousExercise.innerHTML = `Last Week - ${data[1].previousWeeklyExercise} 1hrs`
 
-//             currentSocial.innerHTML = `${value.weekly.currentWeeklySocial} hrs`
-//             previousSocial.innerHTML = `Last Week - ${value.weekly.previousWeeklySocial} hrs`
+//             currentSocial.innerHTML = `${data[1].currentWeeklySocial} hrs`
+//             previousSocial.innerHTML = `Last Week - ${data[1].previousWeeklySocial} hrs`
 
-//             currentSelfCare.innerHTML = `${value.weekly.currentWeeklySelfCare} hrs`
-//             previousSelfCare.innerHTML = `Last Week - ${value.weekly.previousDailySelfCare} hrs`
+//             currentSelfCare.innerHTML = `${data[1].currentWeeklySelfCare} hrs`
+//             previousSelfCare.innerHTML = `Last Week - ${data[1].previousDailySelfCare} hrs`
 
 
 //             //console.log(value)
 //             // console.log(value.daily)
-//             //console.log(value.daily.currentDailyWork)
+//             //console.log(data[0].currentDailyWork)
 //         }
 //     }
 // }
