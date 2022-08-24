@@ -24,8 +24,8 @@ daily.addEventListener("click", getDaily)
 const weekly = document.getElementById("weekly")
 weekly.addEventListener("click", getWeekly)
 
-// const monthly = document.getElementById("monthly")
-// monthly.addEventListener("click", getMonthly)
+const monthly = document.getElementById("monthly")
+monthly.addEventListener("click", getMonthly)
 
 function getDaily() {
     fetch(dataJson)
@@ -37,23 +37,23 @@ function getDaily() {
         console.log(data)
         console.log(data[0].currentDailyWork)
 
-        currentWork.innerHTML = `${data[0].currentDailyWork} hrs`
-        previousWork.innerHTML = `Last Day - ${data[0].previousDailyWork} hrs`
+        currentWork.innerHTML = `${data[0].currentDailyWork}hrs`
+        previousWork.innerHTML = `Last Day - ${data[0].previousDailyWork}hrs`
 
-        currentPlay.innerHTML = `${data[0].currentDailyPlay} hrs`
-        previousPlay.innerHTML = `Last Day - ${data[0].previousDailyPlay} hrs`
+        currentPlay.innerHTML = `${data[0].currentDailyPlay}hrs`
+        previousPlay.innerHTML = `Last Day - ${data[0].previousDailyPlay}hrs`
 
-        currentStudy.innerHTML = `${data[0].currentDailyStudy} hrs`
-        previousStudy.innerHTML = `Last Day - ${data[0].previousDailyStudy} hrs`
+        currentStudy.innerHTML = `${data[0].currentDailyStudy}hrs`
+        previousStudy.innerHTML = `Last Day - ${data[0].previousDailyStudy}hrs`
 
-        currentExercise.innerHTML = `${data[0].currentDailyExercise} hrs`
-        previousExercise.innerHTML = `Last Day - ${data[0].previousDailyExercise} 1hrs`
+        currentExercise.innerHTML = `${data[0].currentDailyExercise}hrs`
+        previousExercise.innerHTML = `Last Day - ${data[0].previousDailyExercise}hrs`
 
-        currentSocial.innerHTML = `${data[0].currentDailySocial} hrs`
-        previousSocial.innerHTML = `Last Day - ${data[0].previousDailySocial} hrs`
+        currentSocial.innerHTML = `${data[0].currentDailySocial}hrs`
+        previousSocial.innerHTML = `Last Day - ${data[0].previousDailySocial}hrs`
 
-        currentSelfCare.innerHTML = `${data[0].currentDailySelfCare} hrs`
-        previousSelfCare.innerHTML = `Last Day - ${data[0].previousDailySelfCare} hrs`
+        currentSelfCare.innerHTML = `${data[0].currentDailySelfCare}hrs`
+        previousSelfCare.innerHTML = `Last Day - ${data[0].previousDailySelfCare}hrs`
     }
 }
 
@@ -67,23 +67,53 @@ function getWeekly() {
         console.log(data)
         console.log(data[1].currentWeeklyWork)
 
-        currentWork.innerHTML = `${data[1].currentWeeklyWork} hrs`
-        previousWork.innerHTML = `Last Week - ${data[1].previousWeeklyWork} hrs`
+        currentWork.innerHTML = `${data[1].currentWeeklyWork}hrs`
+        previousWork.innerHTML = `Last Week - ${data[1].previousWeeklyWork}hrs`
 
-        currentPlay.innerHTML = `${data[1].currentWeeklyPlay} hrs`
-        previousPlay.innerHTML = `Last Week - ${data[1].previousWeeklyPlay} hrs`
+        currentPlay.innerHTML = `${data[1].currentWeeklyPlay}hrs`
+        previousPlay.innerHTML = `Last Week - ${data[1].previousWeeklyPlay}hrs`
 
-        currentStudy.innerHTML = `${data[1].currentWeeklyStudy} hrs`
-        previousStudy.innerHTML = `Last Week - ${data[1].previousWeeklyStudy} hrs`
+        currentStudy.innerHTML = `${data[1].currentWeeklyStudy}hrs`
+        previousStudy.innerHTML = `Last Week - ${data[1].previousWeeklyStudy}hrs`
 
-        currentExercise.innerHTML = `${data[1].currentWeeklyExercise} hrs`
-        previousExercise.innerHTML = `Last Week - ${data[1].previousWeeklyExercise} 1hrs`
+        currentExercise.innerHTML = `${data[1].currentWeeklyExercise}hrs`
+        previousExercise.innerHTML = `Last Week - ${data[1].previousWeeklyExercise}hrs`
 
-        currentSocial.innerHTML = `${data[1].currentWeeklySocial} hrs`
-        previousSocial.innerHTML = `Last Week - ${data[1].previousWeeklySocial} hrs`
+        currentSocial.innerHTML = `${data[1].currentWeeklySocial}hrs`
+        previousSocial.innerHTML = `Last Week - ${data[1].previousWeeklySocial}hrs`
 
-        currentSelfCare.innerHTML = `${data[1].currentWeeklySelfCare} hrs`
-        previousSelfCare.innerHTML = `Last Week - ${data[1].previousWeeklySelfCare} hrs`
+        currentSelfCare.innerHTML = `${data[1].currentWeeklySelfCare}hrs`
+        previousSelfCare.innerHTML = `Last Week - ${data[1].previousWeeklySelfCare}hrs`
+    }
+}
+
+function getMonthly() {
+    fetch(dataJson)
+        .then(response => response.json())
+        .then(data => showData(data))
+        .catch(error => console.log(error))
+
+    const showData = (data) => {
+        console.log(data)
+        console.log(data[2].currentMonthlyWork)
+
+        currentWork.innerHTML = `${data[2].currentMonthlyWork}hrs`
+        previousWork.innerHTML = `Last Month - ${data[2].previousMonthlyWork}hrs`
+
+        currentPlay.innerHTML = `${data[2].currentMonthlyPlay}hrs`
+        previousPlay.innerHTML = `Last Month - ${data[2].previousMonthlyPlay}hrs`
+
+        currentStudy.innerHTML = `${data[2].currentMonthlyStudy}hrs`
+        previousStudy.innerHTML = `Last Month - ${data[2].previousMonthlyStudy}hrs`
+
+        currentExercise.innerHTML = `${data[2].currentMonthlyExercise}hrs`
+        previousExercise.innerHTML = `Last Month - ${data[2].previousMonthlyExercise}hrs`
+
+        currentSocial.innerHTML = `${data[2].currentMonthlySocial}hrs`
+        previousSocial.innerHTML = `Last Month - ${data[2].previousMonthlySocial}hrs`
+
+        currentSelfCare.innerHTML = `${data[2].currentMonthlySelfCare}hrs`
+        previousSelfCare.innerHTML = `Last Month - ${data[2].previousMonthlySelfCare}hrs`
     }
 }
 // function getDaily() {
