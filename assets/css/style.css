@@ -98,6 +98,7 @@ body {
 .container .main_menu .time_frame p:hover {
     color: #fff;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .container .card {
@@ -121,6 +122,7 @@ body {
 .container .card .card_container:hover {
     background-color: var(--Desaturated_blue);
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .card_container .title img:hover{
